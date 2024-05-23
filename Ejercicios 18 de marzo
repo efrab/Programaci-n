@@ -5,6 +5,12 @@ hora=minu//60
 sobra_hora=minu%60
 print(f"{hora}:{sobra_hora}:{sobra_minu}")
 
+
+
+
+
+
+
 fosforo=int(input("Ingrese la cantidad de fósforos:"))
 residuo=fosforo%40
 
