@@ -1,0 +1,314 @@
+num=float(input('Ingrese el Número:'))
+if num%1==0:
+    print('Sin decimal')
+else:
+    print('Con Decimal')
+
+
+nombre=input('Ingrese el user:')
+passwd=input('Ingrese la clave:')
+if (nombre=='renato' and passwd=='puce'):
+    print('Ingrese al sistema')
+else:
+    print('No puedes ingresar al sistema')
+
+
+a=int(input('Ingrese el lado 1:'))
+b=int(input('Ingrese el lado 2:'))
+c=int(input('Ingrese el lado 3:'))
+if a+b>c and a+c>b and b+c>a:
+    print("Es triángulo")
+else:
+    print('No es un triágnulo')
+
+
+
+
+
+A=int(input('Ingrese A:'))
+B=int(input('Ingrese B:'))
+C=int(input('Ingrese C:'))
+if A>B:
+    if A>C:
+        mayor=A
+    else:
+        mayor=C
+else:
+    if B>C:
+        mayor=B
+    else:
+        mayor=C
+print(f'El mayor es {mayor}')
+
+
+print(f'El mayor es {mayor}')
+
+
+
+
+
+n=int(input('Ingrese n:'))
+i=n
+while i>0:
+    print(f'Iteración {i}')
+    i=i-1
+
+
+
+
+n=int(input('Ingrese n:'))
+acu=0
+i=1
+while i<=n:
+    acu=acu+i
+    print(f'{i}',end=",")
+    i=i+1
+print(f'La suma es:{acu}')
+
+
+
+
+n=int(input('Ingrese n:'))
+acu=0
+i=1
+while i<=n:
+    acu=acu+i
+    if i==n:
+        print(f'{i}',end="")
+    else:
+        print(f'{i}',end=",")
+    i=i+1
+print(f'\nLa suma es:{acu}')
+
+
+n=int(input('Ingrese n:'))
+acu=0
+i=1
+while i<=n:
+    acu=acu+1/i
+    if i==n:
+        print(f'{1/i}',end="")
+    else:
+        print(f'{1/i}',end=",")
+    i=i+1
+print(f'\nLa suma es:{acu}')
+
+
+
+
+import math as mate
+n=int(input('Ingrese n:'))
+facto=mate.factorial(n)
+print(f'\nEl factorial de {n}!={facto}')
+
+
+
+
+acu=1
+while i<=n:
+    print(f'{i}',end=" ")
+    acu=acu*i
+    i=i+1
+print(f'\nEl factorial de {n}!={acu}')
+
+
+
+
+
+#Serie Taylor: Exponencial
+import math as mt
+import matplotlib.pyplot as plt
+acu=0
+x=int(input('Ingrese el número x:'))
+n=int(input('Ingrese el número n:'))
+for i in range(0,n):
+    acu=acu+(x**i)/(mt.factorial(i))
+    plt.plot(i, acu,'ro')
+print(f'La exponencial por sumatoria es {acu}')
+expo=mt.exp(x)
+print(f'La exponencial real es {expo}')
+plt.title('GRAFICA DE EXPONENCIAL')
+plt.xlabel('Eje X')
+plt.ylabel('Eje Y')
+plt.grid()
+plt.show()
+
+
+
+
+#ejercicio 1
+i=1
+while i<6:
+    print(f'{i}')
+    i=i+1
+
+
+
+#ejercicio 2
+n=int(input('Ingrese n:'))
+for i in range(1,n+1):
+    if i==n:
+        print(f'{i}', end="")
+    else:
+        print(f'{i}', end=",")
+
+
+
+#ingrese n edades por teclado, calcular la suma de las edades ingresadas y su promedio
+n=int(input("Ingrese la cantidad de edades a ingresar:"))
+acum_e=0
+i=1
+while i<=n:
+    edad=int(input("Ingrese su edad:"))
+    acum_e+=edad
+    i+=1
+prom=acum_e/n
+print(f"La suma de las edades es {acum_e}")
+print(f"El promedio de las edades {prom}")
+
+
+
+#Ingrese n edades por teclado, contar cuantos son mayores de edad
+n=int(input("Ingrese la cantidad de edades a ingresar:"))
+acum_mayor=0
+i=1
+contador=0
+while i<=n:
+    edad=int(input("Ingrese su edad:"))
+    if edad>=18:
+        acum_mayor+=edad
+        contador+=1
+    i+=1
+prom=acum_mayor/contador
+print(f"Hay {contador} mayores de edad")
+print(f"El promedio de las edades mayores es {prom}")
+
+
+
+#Ingrese n edades por teclado, y calcule cual es el mayor y cual el menor
+n=int(input("Ingrese la cantidad de edades a ingresar:"))
+acum_mayor=0
+i=1
+contador=0
+bigger=0
+less=200
+while i<=n:
+    edad=int(input("Ingrese su edad:"))
+    if edad>bigger:
+        bigger=edad
+    if edad<less:
+        less=edad
+
+    i+=1
+
+print(f"El mayor de las edades es {bigger}")
+print(f"El mayor de las edades es {less}")
+
+
+
+#Ingrese n edades por teclado, y calcule cual es el mayor y cual el menor de los mayores de 18
+n=int(input("Ingrese la cantidad de edades a ingresar:"))
+acum_mayor=0
+i=1
+contador=0
+bigger=0
+less=100
+while i<=n:
+    edad=int(input("Ingrese su edad:"))
+    if edad>=18:
+        if edad>bigger:
+            bigger=edad
+        if edad<less:
+            less=edad
+    i+=1
+print(f"El mayor de las edades es {bigger}")
+print(f"El menor de las edades es {less}")
+
+
+
+1#Ingrese n edades por teclado, y calcule cual es el mayor y cual el menor de los mayores de 18 y menores de 18
+n=int(input("Ingrese la cantidad de edades a ingresar:"))
+acum_mayor=0
+i=1
+contador=0
+bigger=0
+less=200
+bigger_men18=0
+less_men18=200
+while i<=n:
+    edad=int(input("Ingrese su edad:"))
+    if edad>=18:
+        if edad>bigger:
+            bigger=edad
+        if edad<less:
+            less=edad
+    else:
+        if edad>bigger_men18:
+            bigger_men18=edad
+        if edad<less_men18:
+            less_men18=edad
+    i+=1
+print(f"El mayor de las edades de 18 es {bigger}")
+print(f"El menor de las edades de 18 es {less}")
+print(f"El mayor de las edades menores 18 es {bigger_men18}")
+print(f"El menor de las edades menores 18 es {less_men18}")
+
+
+
+import random
+n=int(input("Ingrese la cantidad de edades a ingresar:"))
+pares_cont=0
+acum_pares=0
+mayor_impar=0
+menor_impar=150
+for i in range (n):
+    num=random.randint(0,100)
+    if num%2==0:
+        pares_cont+=1
+        acum_pares+=num
+    else:
+        if num>mayor_impar:
+            mayor_impar=num
+
+        if num<menor_impar:
+            menor_impar=num
+promedio=acum_pares/pares_cont
+print(f"La cantidad de pares es {pares_cont} y su promedio es {promedio}")
+print(f"El mayor de los impares es {mayor_impar}")
+print(f"El menor de los impares es {menor_impar}")
+
+
+horas=int(input('Ingrese las horas:'))
+tarifa=int(input('Ingrese la tarifa:'))
+if horas<=1:
+    precio=tarifa
+elif horas>1 and horas<=3:
+    precio=tarifa+(horas-1)*0.75*tarifa
+elif horas>3 and horas<=5:
+    precio=tarifa+2*tarifa*0.75+(horas-3)*0.50*tarifa
+elif horas>5:
+    precio=tarifa+2*tarifa*0.75+2*tarifa*0.50+(horas-5)*0.25*tarifa
+
+print(f'El precio final es {precio}')
+
+
+
+n=int(input('Ingrese la cantidad de notas:'))
+cont1=0
+cont2=0
+cont3=0
+for i in range(n):
+    nota=int(input('Ingrese la nota:'))
+    if nota>=0 or nota<=10:
+        if nota>=0 and nota<4:
+            cont1=cont1+1
+        elif nota>=4 and nota<7:
+            cont2=cont2+1
+        elif nota>=7 and nota<=10:
+            cont3=cont3+1
+    else:
+        print('Calificación Incorrecta')
+        continue
+print(f'Intervalo 1:{cont1}')
+print(f'Intervalo 2:{cont2}')
+print(f'Intervalo 3:{cont3}')
